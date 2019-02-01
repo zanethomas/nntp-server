@@ -3,7 +3,7 @@
 'use strict';
 
 
-const glob    = require('glob');
+//const glob    = require('glob');
 const net     = require('net');
 const path    = require('path');
 const tls     = require('tls');
@@ -13,10 +13,10 @@ const Session = require('./lib/session');
 
 const commands = {};
 
-glob.sync('*.js', { cwd: path.join(__dirname, 'lib', 'commands') }).forEach(file => {
-  let m = require('./lib/commands/' + file);
-  commands[m.head.toUpperCase()] = m;
-});
+// glob.sync('*.js', { cwd: path.join(__dirname, 'lib', 'commands') }).forEach(file => {
+//   let m = require('./lib/commands/' + file);
+//   commands[m.head.toUpperCase()] = m;
+// });
 
 
 const DEFAULT_OPTIONS = {
