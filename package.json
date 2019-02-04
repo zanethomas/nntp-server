@@ -30,6 +30,9 @@
     "split2": "^3.0.0",
     "through2": "^3.0.0"
   },
+  "resolutions": {
+    "terser": "3.14.1"
+  },
   "devDependencies": {
     "coveralls": "^3.0.0",
     "eslint": "^5.5.0",
