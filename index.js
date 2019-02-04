@@ -4,7 +4,7 @@
 
 const log = require('electron-log');
 
-//const glob    = require('glob');
+const glob    = require('glob');
 const net     = require('net');
 const path    = require('path');
 const tls     = require('tls');
@@ -15,7 +15,8 @@ log.error('in nntp-server');
 
 const commands = {};
 
-if (process.env.NODE_ENV !== 'development') {
+
+if (glob) {
   glob.sync('*.js', { cwd: path.join(__dirname, 'lib', 'commands') }).forEach(file => {
     let m = require('./lib/commands/' + file);
     commands[m.head.toUpperCase()] = m;
