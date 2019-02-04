@@ -2,16 +2,12 @@
 //
 'use strict';
 
-const log = require('electron-log');
-
 const glob    = require('glob');
 const net     = require('net');
 const path    = require('path');
 const tls     = require('tls');
 const url     = require('url');
 const Session = require('./lib/session');
-
-log.error('in nntp-server');
 
 const commands = {};
 
