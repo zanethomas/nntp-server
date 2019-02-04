@@ -16,12 +16,10 @@ log.error('in nntp-server');
 const commands = {};
 
 
-if (glob) {
-  glob.sync('*.js', { cwd: path.join(__dirname, 'lib', 'commands') }).forEach(file => {
-    let m = require('./lib/commands/' + file);
-    commands[m.head.toUpperCase()] = m;
-  });
-}
+glob.sync('*.js', { cwd: path.join(__dirname, 'lib', 'commands') }).forEach(file => {
+  let m = require('./lib/commands/' + file);
+  commands[m.head.toUpperCase()] = m;
+});
 
 const DEFAULT_OPTIONS = {
   // Use `false` if you don't need authentication
